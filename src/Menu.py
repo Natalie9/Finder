@@ -100,9 +100,11 @@ def tipos_objetos():
     print("1. Materiais Escolares")
     print("2. Documentos")
     print("3. Itens Pessoais")
+    print("4. Sair ")
     tipo = input("\nEscolha um tipo: ")
     while (tipo != '1') and (tipo != '2') and (tipo != '3'):
-        tipo = input("\nERRO!! Escolha entre 1,2 e 3.\nTente Novamente: ")
+        tipo = input("\nERRO!! Escolha entre 1,2,3 e 4.\nTente Novamente: ")
+        
     if tipo == ('1'):
         proc_materiais_esco()
     if tipo == ('2'):
@@ -110,7 +112,7 @@ def tipos_objetos():
     if tipo == ('3'):
         proc_item_pessoal()
 
-def objetos():
+def objetos(id):
     global tipo
     global tipo_mat
     global proc_cor
@@ -119,9 +121,10 @@ def objetos():
     global item_pess
     global proc_size
     tipos_objetos()
+    id_t = str(id)
     if tipo == ('1'):
-        return tipo +"/"+ tipo_mat +"/"+ proc_cor +"/"+proc_tamanho+"\n"
+        return id_t+"/"+tipo +"/"+ tipo_mat +"/"+ proc_cor +"/"+proc_tamanho+"\n"
     if tipo == ('2'):
-        return tipo+"/"+class_doc+"\n"
+        return str(id)+"/"+tipo+"/"+class_doc+"\n"
     if tipo == ('3'):
-        return tipo+"/"+item_pess+"/"+proc_size+"/"+proc_cor+"\n"
+        return str(id)+"/"+tipo+"/"+item_pess+"/"+proc_size+"/"+proc_cor+"\n"
