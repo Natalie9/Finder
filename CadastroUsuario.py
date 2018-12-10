@@ -17,10 +17,12 @@ def cadastrar():
         senha2 = input('Digite sua senha novamente: ')
 
    
-    arq = open('cadastro.txt', 'w')
-    texto = email+"/"+senha+"/"+nome+"/"+telefone
-    arq.write(texto)
+    arq = open('cadastro.txt', 'a')
+    texto = email+"/"+senha+"/"+nome+"/"+telefone +'\n'
+    arq.writelines(texto)
     arq.close()
+
+    
 
     
     ref_arquivo = open("cadastro.txt","r")
