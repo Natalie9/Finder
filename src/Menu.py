@@ -123,8 +123,8 @@ def objetos(id):
     tipos_objetos()
     id_t = str(id)
     if tipo == ('1'):
-        return id_t+"/"+tipo +"/"+ tipo_mat +"/"+ proc_cor +"/"+proc_tamanho+"\n"
+        return id_t+"-"+str(tipo) +"/"+ str(tipo_mat) +"/"+ str(proc_cor) +"/"+str(proc_tamanho)+"\n"
     if tipo == ('2'):
-        return str(id)+"/"+tipo+"/"+class_doc+"\n"
+        return str(id)+"-"+tipo+"/"+class_doc+"\n"
     if tipo == ('3'):
-        return str(id)+"/"+tipo+"/"+item_pess+"/"+proc_size+"/"+proc_cor+"\n"
+        return str(id)+"-"+str(tipo)+"/"+str(item_pess)+"/"+str(proc_size)+"/"+str(proc_cor)+"\n"
